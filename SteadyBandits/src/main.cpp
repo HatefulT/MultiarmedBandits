@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     sim.save_data_to_file("greedy.txt");
     sim.clear_data();
 
-    sim.simulate(make_shared<EpsilonGreedyStrategy>(b.get_arms_count()), turns_count);
+    sim.simulate(make_shared<EpsilonGreedyStrategy>(b.get_arms_count(), 0.02), turns_count);
     sim.save_data_to_file("epsilongreedy.txt");
     sim.clear_data();
 }
